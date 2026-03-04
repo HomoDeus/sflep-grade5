@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>外教社小学英语5年级 - 预习乐园</title>
+<meta name="description" content="外教社小学英语5年级互动预习网站，边玩边学。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared/base.css">
+<link rel="stylesheet" href="shared/style.css">
+<style>
+  .hero {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+    animation: heroGlow 6s ease-in-out infinite alternate;
+  }
+  @keyframes heroGlow {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(30px, 20px); }
+  }
+  .hero-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 900;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    margin-bottom: 0.5rem;
+    position: relative;
+  }
+  .hero-subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+    opacity: 0.9;
+    position: relative;
+  }
+  .courses-section {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+  }
+  .section-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+  .course-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 1.8rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+  }
+  .course-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+  }
+  .course-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary);
+  }
+  .course-card.coming-soon {
+    opacity: 0.6;
+    cursor: default;
+    pointer-events: none;
+  }
+  .course-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+  .course-name {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+  }
+  .course-desc {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    line-height: 1.5;
+  }
+  .course-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    margin-top: 1rem;
+  }
+  .badge-ready {
+    background: #d1fae5;
+    color: #065f46;
+  }
+  .badge-soon {
+    background: #fef3c7;
+    color: #92400e;
+  }
+  footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-light);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+  }
+</style>
+</head>
+<body>
+<div class="hero">
+  <div class="hero-title">🌟 外教社英语 5年级</div>
+  <div class="hero-subtitle">互动预习乐园 · 边玩边学</div>
+</div>
+<main class="courses-section">
+  <div class="section-title">📚 课程列表</div>
+  <div class="course-grid">
+    <a href="starter-unit/index.html" class="course-card">
+      <div class="course-label">Starter Unit</div>
+      <div class="course-name">Join in Again</div>
+      <div class="course-desc">复习字母大小写、问候语和常用表达，包含多种互动游戏。</div>
+      <span class="course-badge badge-ready">✅ 已完成</span>
+    </a>
+    <div class="course-card coming-soon">
+      <div class="course-label">Unit 1</div>
+      <div class="course-name">待添加</div>
+      <div class="course-desc">即将上线...</div>
+      <span class="course-badge badge-soon">🔜 敬请期待</span>
+    </div>
+    <div class="course-card coming-soon">
+      <div class="course-label">Unit 2</div>
+      <div class="course-name">待添加</div>
+      <div class="course-desc">即将上线...</div>
+      <span class="course-badge badge-soon">🔜 敬请期待</span>
+    </div>
+  </div>
+</main>
+<footer>
+  <p>外教社小学英语5年级 · 互动预习网站 · 用 ❤️ 为小朋友们制作</p>
+</footer>
+</body>
+</html>
